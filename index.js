@@ -30,8 +30,7 @@ app.post('/', function(req, res){
 
 app.get('/:id', function(req, res){
     var index = req.params.id;
-    console.log("localhost:3000/" + index);
-    var thing = db.link.findAll({
+    db.link.findAll({
         where : {
             new : "localhost:3000/" + String(index)
         }
