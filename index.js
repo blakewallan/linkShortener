@@ -18,12 +18,14 @@ app.get('/', function(req, res){
 
 //Convert link to hash id
 var numConvert = function(link){
-    var converted = "";
+    var converted = "localhost:3000/";
     for(var i = 0; i < link.length; i ++){
         converted += link.charCodeAt(i);
     }
     return hashids.encode(parseInt(converted));
 }
+
+console.log(numConvert("alsjdflajfdlasasdfasfads"));
 
 
 app.listen(3000);
