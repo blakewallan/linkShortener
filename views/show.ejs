@@ -16,18 +16,15 @@
 
         <form method="POST" action="/">
             <input type="text" name="og" placeholder="Paste your link here">
-            
+
             <input type="submit">
         </form>
 
-        <h1><ul>
-            <% for(var i=0; i<links.length; i++) {%>
-            <li><%= links[i].original  %>===== <br> <%= links[i].new%></li>
-            <% } %>
-            </ul></h1>
+       
+        <h1>Your Shortened Link: <br><a href="<%= links.original%>"><%= links.new %></a></h1>
+        
 
-         
-                    
+
         <script src=""></script>
     </body>
 </html>
